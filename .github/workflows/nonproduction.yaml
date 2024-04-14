@@ -28,6 +28,7 @@ jobs:
           node-version: 20
       - name: build site
         run: |
+          npm install --package-lock-only
           npm ci
           npm run build
       - name: deploy files to bucket
